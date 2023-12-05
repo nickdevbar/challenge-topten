@@ -8,7 +8,7 @@ main = Blueprint('metatrader_blueprint', __name__) # --> par uso de las rutas
 @main.route('/historiales')
 def get_languages():
     
-    login = request.args.get('login', type=int), # return tuple = ('xxxxxxxx',)
+    login = request.args.get('login', type=int), # return tuple = ('xxxxxxxx',) type=int para convertir en entero: (xxxxxxxx,)
     password = request.args.get('password')
     try:
         deals = MetaTraderService.get_data(login[0], password)
