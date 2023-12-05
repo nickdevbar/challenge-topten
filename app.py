@@ -1,7 +1,7 @@
 from config import config
 from src import init_app
 
-configuration = config['development']
+configuration = config['development'] # developer mode
 app = init_app(configuration)
 
 if __name__ == '__main__':
